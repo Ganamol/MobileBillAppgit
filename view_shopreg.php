@@ -41,7 +41,7 @@ $data=mysqli_query($con,"select * from shop_regtb where status='register'");
    include 'sidebar.php';
    ?>
       <!-- partial -->
-      <div class="main-panel">
+     <div class="main-panel">
         <div class="content-wrapper">
           <div class="row">
             <div class="col-sm-12 mb-4 mb-xl-0">
@@ -86,7 +86,7 @@ $data=mysqli_query($con,"select * from shop_regtb where status='register'");
         while($row=mysqli_fetch_assoc($data))
         {
         ?>
-    <tr>
+     <tr>
     
     <td><?php echo $row['Shop_name'];?></td>
     <td><?php echo $row['Location'];?></td>

@@ -1,25 +1,24 @@
-<!-- <?php
+<?php
 
 include 'connection.php';
 if(isset($_POST['register']))
 {
 
   $name=$_POST['s_name'];
-  var_dump($name);
-  exit();
+  
   $loc=$_POST['location'];
   $email=$_POST['email'];
   $phone=$_POST['phone'];
   
 
-  mysqli_query($con,"INSERT INTO `shop_regtb`(`Shop_name`, `Location`, `Phone`, `Email`, `status`) VALUES ('$name','$loc','$phone','$email','register')");
-  mysqli_query($con,"INSERT INTO `login_tb`(`user_name`, `password`, `user_type`) VALUES ('$email','$phone','warehouse')");
+  mysqli_query($con,"INSERT INTO `shop_regtb`(`Shop_name`, `Location`, `Phone_no`, `Email`, `status`) VALUES ('$name','$loc','$phone','$email','register')");
+  mysqli_query($con,"INSERT INTO `login_tb`(`user_name`, `password`, `user_type`) VALUES ('$email','$phone','shop')");
   
   echo "<script>alert('insert successfully')</script>";
 }
 
 
-?> -->
+?>
 
 
 
@@ -49,7 +48,7 @@ if(isset($_POST['register']))
 </head>
 
 <body>
-<form action="" method="POST">
+
   <div class="container-scroller">
     <div class="container-fluid page-body-wrapper full-page-wrapper">
       <div class="content-wrapper d-flex align-items-stretch auth auth-img-bg">
@@ -60,7 +59,7 @@ if(isset($_POST['register']))
                 <!-- <img src="../../images/logo-dark.svg" alt="logo">  -->
               </div>
                <h4>Shop Registration</h4><br><br>
-         
+               <form action="" method="POST">
                <!-- <h6 class="font-weight-light">Join us today! It takes only few steps</h6> -->
               <form class="pt-3" >
                 <div class="form-group">
@@ -117,7 +116,7 @@ if(isset($_POST['register']))
                   </div>
                 </div>
                 <div class="mt-3">
-                <button type="submit"   name="register">Register</button> 
+                <button type="submit" name="register">Register</button> 
                   <!-- <a class="btn btn-block btn-info btn-lg font-weight-medium auth-form-btn" href="../../index.html">SIGN UP</a> -->
                 </div>
                 <div class="text-center mt-4 font-weight-light">
