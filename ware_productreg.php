@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 include 'connection.php';
 if(isset($_POST['submit']))
 {
@@ -12,12 +12,20 @@ if(isset($_POST['submit']))
   $quantity=$_POST['quantity'];
   $weight=$_POST['weight'];
   $batch=$_POST['batchno'];
-  
+  $_SESSION['b_id']=$batch;
 
   mysqli_query($con,"INSERT INTO `product_reg`( `Product_name`, `Company`, `Exp_date`, `Price`, `Quantity`, `Weight`, `Batch_no`) VALUES ('$pname','$company','$date','$price','$quantity','$weight','$batch')");
-  // mysqli_query($con,"INSERT INTO `login_tb`(`user_name`, `password`, `user_type`) VALUES ('$email','$phone','shop')");
+  
+  $data=mysqli_query($con,"select * from product_reg where Batch_no='{$_SESSION['b_id']}'");
+  $row=mysqli_fetch_assoc($data);
+  
+    if(mysqli_num_rows($data)>0)
+    {
+      
+  mysqli_query($con,"INSERT INTO `stock_tb`(`product_id`, `stock`) VALUES ('$row[Product_id]','$quantity')");
   
   echo "<script>alert('insert successfully')</script>";
+    }
 }
 ?>
 <!DOCTYPE html>
@@ -66,6 +74,7 @@ if(isset($_POST['submit']))
                 </h1>
             </div>
           </div>
+          <form action="" method="POST">
           <div class="col-12 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
@@ -109,7 +118,7 @@ if(isset($_POST['submit']))
                 </div>
               </div>
             </div>
-               
+            </form>
         <!-- content-wrapper ends -->
         <!-- partial:partials/_footer.html -->
         <footer class="footer">

@@ -27,7 +27,7 @@
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item"><a class="nav-link" href="ware_productreg.php">Product registration</a></li>
                 <li class="nav-item"> <a class="nav-link" href="ware_viewshop.php">Shop List</a></li>
-                <li class="nav-item"> <a class="nav-link" href=""></a></li>
+                <li class="nav-item"> <a class="nav-link" href="ware_stockupdate.php">Stock Update</a></li>
               </ul>
             </div>
           </li>
