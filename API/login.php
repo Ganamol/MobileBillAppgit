@@ -12,6 +12,9 @@ $pwd=$_POST["password"];
  $row=mysqli_fetch_assoc(($data));
  if(mysqli_num_rows($data)>0)
  {
+$a=$row['login_id'];
+$date=Date("Y/m/d");
+   mysqli_query($con,"INSERT INTO `attendence_tb`(`Van_id`, `Date`) VALUES ('$a','$date')");
     $response['message']=$row['login_id'];
    
 }
