@@ -15,6 +15,9 @@ while($row=mysqli_fetch_assoc(($data)))
 {
    
     $myarray['shoplist']=$row['Shop_name'];
+    $myarray['Location']=$row['Location'];
+    $myarray['Email']=$row['Email'];
+    $myarray['Phone_no']=$row['Phone_no'];
     array_push($list,$myarray);
 }
 }
