@@ -84,32 +84,32 @@ if(isset($_POST['submit']))
                   <form class="forms-sample">
                     <div class="form-group">
                       <label for="exampleInputName1">Product Name</label>
-                      <input type="text" name="pname" class="form-control" id="exampleInputName1" placeholder="Enter Name">
+                      <input type="text" required name="pname" class="form-control" id="exampleInputName1" placeholder="Enter Name">
                     </div>
                     <div class="form-group">
                       <label for="exampleInputEmail3">Company</label>
-                      <input type="text" name="company" class="form-control" id="exampleInputEmail3" placeholder="Enter Company">
+                      <input type="text" required name="company" class="form-control" id="exampleInputEmail3" placeholder="Enter Company">
                     </div>
                     <div class="form-group">
                       <label for="exampleInputPassword4">Expiry date</label>
-                      <input type="date" name="date" class="form-control" id="exampleInputPassword4" placeholder="Enter Expiry  date">
+                      <input type="date" required name="date" class="form-control" id="exampleInputPassword4" placeholder="Enter Expiry  date">
                     </div>
                     <div class="form-group">
                       <label for="exampleInputPassword4">Price</label>
-                      <input type="text" name="price" class="form-control" id="exampleInputPassword4" placeholder="Enter price">
+                      <input type="text" required name="price" class="form-control" id="exampleInputPassword4" placeholder="Enter price">
                     </div>
                     <div class="form-group">
                       <label for="exampleInputPassword4">Quantity</label>
-                      <input type="text" name="quantity" class="form-control" id="exampleInputPassword4" placeholder="Enter Quantity">
+                      <input type="text" required name="quantity" class="form-control" id="exampleInputPassword4" placeholder="Enter Quantity">
                     </div>
                    
                     <div class="form-group">
                       <label for="exampleInputCity1">Weight</label>
-                      <input type="text" name="weight" class="form-control" id="exampleInputCity1" placeholder="Enter Weight">
+                      <input type="text" required name="weight" class="form-control" id="exampleInputCity1" placeholder="Enter Weight">
                     </div>
                     <div class="form-group">
                       <label for="exampleInputCity1">Batch No</label>
-                      <input type="text" name="batchno" class="form-control" id="exampleInputCity1" placeholder=" Enter Batch No">
+                      <input type="text" required name="batchno" class="form-control" id="exampleInputCity1" placeholder=" Enter Batch No">
                     </div>
                    
                     <button type="submit" name="submit" class="btn btn-primary mr-2">Submit</button>

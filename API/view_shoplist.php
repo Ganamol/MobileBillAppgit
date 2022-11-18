@@ -13,6 +13,7 @@ include 'connection.php';
  {
 while($row=mysqli_fetch_assoc(($data)))
 {
+    $myarray['Shop_id']=$row['Shop_id'];
    
     $myarray['shoplist']=$row['Shop_name'];
     $myarray['Location']=$row['Location'];

@@ -70,7 +70,7 @@ if(isset($_POST['register']))
                         <i class="mdi mdi-account-outline text-primary"></i>
                       </span>
                     </div>
-                    <input type="text" name="s_name" class="form-control form-control-lg border-left-0" placeholder="Shop Name">
+                    <input type="text" required name="s_name" class="form-control form-control-lg border-left-0" placeholder="Shop Name">
                   </div>
                 </div>
                 <div class="form-group">
@@ -81,7 +81,7 @@ if(isset($_POST['register']))
                         <i class="mdi mdi-email-outline text-primary"></i>
                       </span>
                     </div>
-                    <input type="text" name="location" class="form-control form-control-lg border-left-0" placeholder="Location">
+                    <input type="text" required name="location" class="form-control form-control-lg border-left-0" placeholder="Location">
                   </div>
                 </div>
                 <div class="form-group">
@@ -92,7 +92,7 @@ if(isset($_POST['register']))
                         <i class="mdi mdi-email-outline text-primary"></i>
                       </span>
                     </div>
-                    <input type="email" name="email" class="form-control form-control-lg border-left-0" placeholder="Email">
+                    <input type="email" required name="email" class="form-control form-control-lg border-left-0" placeholder="Email">
                   </div>
                 </div>
                
@@ -104,7 +104,7 @@ if(isset($_POST['register']))
                         <i class="mdi mdi-lock-outline text-primary"></i>
                       </span>
                     </div>
-                    <input type="text" name="phone" class="form-control form-control-lg border-left-0" id="exampleInputPassword" placeholder="Phone">                        
+                    <input type="text" required name="phone" class="form-control form-control-lg border-left-0" id="exampleInputPassword" placeholder="Phone">                        
                   </div>
                 </div>
                 <div class="mb-4">

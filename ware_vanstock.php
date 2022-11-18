@@ -75,7 +75,7 @@ if(isset($_POST['submit']))
                   <form action="" method="POST">
                   <div class="form-group">
                     <label for="exampleFormControlSelect1">Stock</label>
-                    <select  name="Productid"class="form-control form-control-lg" id="exampleFormControlSelect1">
+                    <select required  name="Productid"class="form-control form-control-lg" id="exampleFormControlSelect1">
                      <option value="">Select</option>   
         <?php
         while($row=mysqli_fetch_assoc($data))
@@ -89,7 +89,7 @@ if(isset($_POST['submit']))
                   </div>
                   <div class="form-group">
                     <label for="exampleFormControlSelect1">Van Details</label>
-                    <select  name="Van_id"class="form-control form-control-lg" id="exampleFormControlSelect1">
+                    <select required  name="Van_id"class="form-control form-control-lg" id="exampleFormControlSelect1">
                      <option value="">Select</option>   
         <?php
         while($row1=mysqli_fetch_assoc($data1))
@@ -107,7 +107,7 @@ if(isset($_POST['submit']))
                     <div class="input-group-prepend bg-transparent">
                      
                     </div>
-                    <input type="text" name="quantity" class="form-control form-control-lg border-left-0" placeholder="Enter Quantity">
+                    <input type="text" required name="quantity" class="form-control form-control-lg border-left-0" placeholder="Enter Quantity">
                   </div>
                 </div>
                 <div class="form-group">
@@ -116,7 +116,7 @@ if(isset($_POST['submit']))
                     <div class="input-group-prepend bg-transparent">
                      
                     </div>
-                    <input type="Date" name="date" class="form-control form-control-lg border-left-0" placeholder="Enter Quantity">
+                    <input type="Date" required name="date" class="form-control form-control-lg border-left-0" placeholder="Enter Quantity">
                   </div>
                 <button type="submit" name="submit" class="btn btn-primary mr-2">Van Stock Enter</button>
                     
