@@ -28,6 +28,16 @@ if(isset($_POST['login']))
                $id=$_SESSION['login_id'];
         header("location:ware_index.php");
     }
+    if($row['user_type']=="shop")
+    {
+
+      $data1=mysqli_query($con,"SELECT shop_regtb.Shop_id FROM `login_tb` inner join shop_regtb on shop_regtb.Email=login_tb.user_name where shop_regtb.Email='$username'");
+       $row1=mysqli_fetch_assoc($data1);
+      $_SESSION['Shop_id']=$row1['Shop_id'];
+      
+      
+  header("location:shop_index.php");
+}
     }
     else
     {
