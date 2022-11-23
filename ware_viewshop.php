@@ -1,6 +1,6 @@
 <?php
 include 'connection.php';
-$data=mysqli_query($con,"select * from shop_regtb where status='register'");
+$data=mysqli_query($con,"select * from shop_regtb where status='approve'");
 
 
 ?>

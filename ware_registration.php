@@ -14,6 +14,7 @@ if(isset($_POST['register']))
   mysqli_query($con,"INSERT INTO `login_tb`(`user_name`, `password`, `user_type`) VALUES ('$email','$phone','warehouse')");
   
   echo "<script>alert('insert successfully')</script>";
+  header("location:login.php");
 }
 
 
@@ -103,7 +104,7 @@ if(isset($_POST['register']))
                         <i class="mdi mdi-lock-outline text-primary"></i>
                       </span>
                     </div>
-                    <input type="text" name="phone" required class="form-control form-control-lg border-left-0" id="exampleInputPassword" placeholder="Phone">                        
+                    <input type="text" pattern="[0-9]{10}" name="phone" required class="form-control form-control-lg border-left-0" id="exampleInputPassword" placeholder="Phone">                        
                   </div>
                 </div>
                 <div class="mb-4">
@@ -115,7 +116,7 @@ if(isset($_POST['register']))
                   </div>
                 </div>
                 <div class="mt-3">
-                <button type="submit" class="btn btn-primary btn-block" name="register">Register</button> 
+                <button type="submit" class="btn btn-primary btn-block" name="register" style="height: 100;width:100">Register</button> 
                   <!-- <a class="btn btn-block btn-info btn-lg font-weight-medium auth-form-btn" href="../../index.html">SIGN UP</a> -->
                 </div>
                 <div class="text-center mt-4 font-weight-light">

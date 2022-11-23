@@ -14,7 +14,9 @@ $date=$_POST["date"];
 $a=date("Y/m/d");
 
  $data=mysqli_query($con,"INSERT INTO `shop_stock`(`Van_id`, `shop_id`, `product_id`, `quantity`, `date`) VALUES ('$vid','$sid','$pid','$qua','$a')");
-//  mysqli_query($con,"INSERT INTO `login_tb`(`user_name`, `password`, `user_type`) VALUES ('$demail','$dph','van')");
+ mysqli_query($con,"UPDATE `van_stock` SET `Quantity`=Quantity-'$qua' WHERE Van_id='$vid'");
+
+ //  mysqli_query($con,"INSERT INTO `login_tb`(`user_name`, `password`, `user_type`) VALUES ('$demail','$dph','van')");
  if($data)
  {
     $response['message']="sucess";
