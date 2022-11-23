@@ -1,6 +1,8 @@
 <?php
 include 'connection.php';
 $data=mysqli_query($con,"SELECT product_reg.Product_id,product_reg.Product_name,stock_tb.stock FROM `stock_tb` inner join product_reg on product_reg.Product_id=stock_tb.Product_id");
+$data1=mysqli_query($con,"SELECT * FROM `van_regtb`");
+
 if(isset($_POST['submit']))
 {
 
@@ -8,10 +10,11 @@ if(isset($_POST['submit']))
   
   $pid=$_POST['Productid'];
 
-  
+  $vid=$_POST['Van_id'];
 
   
   mysqli_query($con,"UPDATE `stock_tb` SET `stock`=stock+'$stk' WHERE Product_id='$pid'");
+  mysqli_query($con,"UPDATE `van_stock` SET `Quantity`=Quantity-'$stk' WHERE Van_id='$vid'");
   
   echo "<script>alert('Update successfully')</script>";
 }
@@ -71,6 +74,21 @@ if(isset($_POST['submit']))
               <div class="card">
                 <div class="card-body">
                   <form action="" method="POST">
+
+                  <div class="form-group">
+                    <label for="exampleFormControlSelect1">Van details</label>
+                    <select  name="Van_id"class="form-control form-control-lg" id="exampleFormControlSelect1">
+                     <option value="">Select</option>   
+        <?php
+        while($row1=mysqli_fetch_assoc($data1))
+        {
+        ?>
+        <option value="<?php echo $row1['Van_id'];?>"><?php echo $row1['Van_num'];?></option>
+        <?php
+        }
+        ?>
+                    </select>
+                  </div>
                   <div class="form-group">
                     <label for="exampleFormControlSelect1">Stock</label>
                     <select  name="Productid"class="form-control form-control-lg" id="exampleFormControlSelect1">
@@ -85,6 +103,8 @@ if(isset($_POST['submit']))
         ?>
                     </select>
                   </div>
+
+
                   <div class="form-group">
                   <label>Stock</label>
                   <div class="input-group">
