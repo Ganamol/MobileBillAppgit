@@ -12,10 +12,7 @@
         </div>
         <ul class="nav">
           <li class="nav-item">
-            <a class="nav-link" >
-              <i class="icon-box menu-icon"></i>
-              <span class="menu-title">Dashboard</span>
-            </a>
+          
           </li>
           <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
@@ -25,7 +22,7 @@
             </a>
             <div class="collapse" id="ui-basic">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"><a class="nav-link" href="">View Payment</a></li>
+                <li class="nav-item"><a class="nav-link" href="shop_viewpayment.php">View Payment</a></li>
                 <li class="nav-item"> <a class="nav-link" href="shop_viewstock.php">View Stock</a></li>
                 
               </ul>

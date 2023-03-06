@@ -1,7 +1,7 @@
 <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <div class="user-profile">
           <div class="user-image">
-            <img src="images/faces/face28.png">
+            <img src="images/faces/face16.jpg">
           </div>
           <div class="user-name">
               Stock Management
@@ -29,6 +29,7 @@
                 <li class="nav-item"> <a class="nav-link" href="view_shopreg.php">Shop</a></li>
                 <li class="nav-item"> <a class="nav-link" href="view_warereg.php">Warehouse</a></li>
               </ul>
+             
             </div>
           </li>
          

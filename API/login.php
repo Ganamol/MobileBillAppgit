@@ -23,3 +23,4 @@ $date=Date("Y/m/d");
     $response['vanid']="failed";
  }
  echo json_encode($response);
+ ?>

@@ -44,10 +44,7 @@ $data=mysqli_query($con,"select * from shop_regtb where status='register'");
      <div class="main-panel">
         <div class="content-wrapper">
           <div class="row">
-            <div class="col-sm-12 mb-4 mb-xl-0">
-              <h4 class="font-weight-bold text-dark"></h4>
-             <h1>Warehouse</h1>
-            </div>
+            
           </div>
        
         <!-- content-wrapper ends -->

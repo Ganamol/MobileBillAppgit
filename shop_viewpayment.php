@@ -5,7 +5,7 @@ include 'connection.php';
 $id=$_SESSION['Shop_id'];
 // var_dump($id);
 // exit();
-$data=mysqli_query($con,"SELECT van_regtb.Van_num,product_reg.Product_name,shop_stock.quantity,shop_stock.date FROM `shop_stock` INNER join van_regtb on van_regtb.Van_id=shop_stock.Van_id  INNER JOIN product_reg on product_reg.Product_id=shop_stock.product_id where shop_stock.shop_id='$id'");
+$data=mysqli_query($con,"SELECT * FROM `bill`INNER join shop_regtb on bill.shop_id=shop_regtb.Shop_id INNER join van_regtb on van_regtb.Van_id=bill.Van_id  where shop_regtb.shop_id='$id'");
 
 
 ?>
@@ -69,10 +69,10 @@ $data=mysqli_query($con,"SELECT van_regtb.Van_num,product_reg.Product_name,shop_
                           </th>
                          
                           <th>
-                            Product
+                           Mode of Pay
                           </th>
                           <th>
-                        Quantity
+                        Amount
                           </th>
                           <th>
                         Date
@@ -91,8 +91,8 @@ $data=mysqli_query($con,"SELECT van_regtb.Van_num,product_reg.Product_name,shop_
     
     <td><?php echo $row['Van_num'];?></td>
   
-    <td><?php echo $row['Product_name'];?></td>
-    <td><?php echo $row['quantity'];?></td>
+    <td><?php echo $row['modeofpay'];?></td>
+    <td><?php echo $row['amount'];?></td>
     <td><?php echo $row['date'];?></td>
    
         </td>

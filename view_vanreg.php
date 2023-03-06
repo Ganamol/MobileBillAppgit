@@ -1,7 +1,10 @@
 <?php
 include 'connection.php';
 $data=mysqli_query($con,"select * from van_regtb where status='register'");
+if(isset($_POST)=="submit")
+{
 
+}
 
 ?>
 <!DOCTYPE html>
@@ -92,7 +95,7 @@ $data=mysqli_query($con,"select * from van_regtb where status='register'");
     <td><?php echo $row['Driver_ph'];?></td>
     <!-- <a href="Approvevan_reg.php?id=<?php echo $row['Van_id']?>">APPROVE</a></ -->
     <td><!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+<button type="button" name="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
   Approve/Reject
 </button>
 
