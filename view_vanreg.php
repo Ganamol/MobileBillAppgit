@@ -1,10 +1,6 @@
 <?php
 include 'connection.php';
 $data=mysqli_query($con,"select * from van_regtb where status='register'");
-if(isset($_POST)=="submit")
-{
-
-}
 
 ?>
 <!DOCTYPE html>
@@ -56,8 +52,11 @@ if(isset($_POST)=="submit")
           <div class="col-lg-12 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                  <form action="">
+                  <form action="view_vanreg1.php">
+              <div style="float: right;"> <button class="btn btn-primary">Approved Van Details</button></div> 
+               </form>   <form action="">
                   <div class="table-responsive pt-3">
+                    
                     <table class="table table-bordered" class="table-warning">
                       <thead>
                         <tr>
@@ -72,12 +71,7 @@ if(isset($_POST)=="submit")
                           <th>
                             Phone No
                           </th>
-                          <th>
-                        
-                          </th>
-                          <th>
-                            
-                          </th>
+                    
                         </tr>
                       </thead>
                       <tbody>
@@ -93,13 +87,12 @@ if(isset($_POST)=="submit")
     <td><?php echo $row['Van_num'];?></td>
     <td><?php echo $row['Driver_name'];?></td>
     <td><?php echo $row['Driver_ph'];?></td>
-    <!-- <a href="Approvevan_reg.php?id=<?php echo $row['Van_id']?>">APPROVE</a></ -->
-    <td><!-- Button trigger modal -->
+   <td>
 <button type="button" name="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
   Approve/Reject
 </button>
 
-
+</td>
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -109,21 +102,19 @@ if(isset($_POST)=="submit")
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
+<center>
       <label for=""><?php echo $row['Van_num'];?></label><br><br>
     <label for=""><?php echo $row['Driver_name'];?></label><br><br>
     <label for=""><?php echo $row['Driver_ph'];?></label><br><br>
     <a href="Approvevan_reg.php?id=<?php echo $row['Van_id']?>" class="btn btn-danger">Approve</a>
     <a href="Rejectvan_reg.php?id=<?php echo $row['Van_id']?>" class="btn btn-danger">Reject</a>
-
+    </center>
       </div>
       
       </div>
     </div>
   </div>
-</div><td>
-  <!-- model -->
-
-        </td>
+</div>
     <!-- <td><a href="Rejectvan_reg.php?id=<?php echo $row['Van_id']?>">REJECT</a></td> -->
    
    

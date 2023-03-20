@@ -1,6 +1,6 @@
 <?php
 include 'connection.php';
-$data=mysqli_query($con,"select * from Ware_Housetb where status='register'");
+$data=mysqli_query($con,"select * from Ware_Housetb where status='approve'");
 
 
 ?>
@@ -53,8 +53,8 @@ $data=mysqli_query($con,"select * from Ware_Housetb where status='register'");
           <div class="col-lg-12 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                <form action="view_warereg1.php">
-              <div style="float: right;"> <button class="btn btn-primary">Approved Warehouse Details</button></div> 
+                <form action="view_warereg.php">
+              <div style="float: right;"> <button class="btn btn-primary">Back</button></div> 
                </form> 
                   <form action="">
                   <div class="table-responsive pt-3">
@@ -92,44 +92,7 @@ $data=mysqli_query($con,"select * from Ware_Housetb where status='register'");
     <td><?php echo $row['Location'];?></td>
     <td><?php echo $row['Phone'];?></td>
     <td><?php echo $row['Email'];?></td>
-    <!-- <a href="Approvevan_reg.php?id=<?php echo $row['Van_id']?>">APPROVE</a></ -->
-    <td><!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Approve/Reject
-</button>
-<!-- <button class="btn btn-success">Button</button> -->
-
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-      <center>   <h1 class="modal-title fs-5" id="exampleModalLabel">Approve Registration</h1></center>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <center>
-    <label for="">Warehouse Name:</label>  <label for=""><?php echo $row['Ware_name'];?></label><br><br>
-    <label for="">Location:</label> <label for=""><?php echo $row['Location'];?></label><br><br>
-    <label for="">Phone:</label> <label for=""><?php echo $row['Phone'];?></label><br><br>
-    <label for="">Email:</label><label for=""><?php echo $row['Email'];?></label><br><br>
-        
-    <a href="Approveware_reg.php?id=<?php echo $row['Ware_id']?>" class="btn btn-danger">Approve</a>
-    <a href="Rejectware_reg.php?id=<?php echo $row['Ware_id']?>" class="btn btn-danger">  Reject</a>
-  </center>
-      </div>
-      
-      </div>
-    </div>
-  </div>
-</div><td>
-  <!-- model -->
-
-        </td>
-    <!-- <td><a href="Rejectvan_reg.php?id=<?php echo $row['Van_id']?>">REJECT</a></td> -->
-   
-   
+    <td><Button class="btn btn-success">Approved</Button></td>
      </tr>
 
        <?php

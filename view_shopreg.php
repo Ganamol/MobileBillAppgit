@@ -52,6 +52,9 @@ $data=mysqli_query($con,"select * from shop_regtb where status='register'");
           <div class="col-lg-12 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
+                <form action="view_shopreg1.php">
+              <div style="float: right;"> <button class="btn btn-primary">Approved Shop Details</button></div> 
+               </form>  
                   <form action="">
                   <div class="table-responsive pt-3">
                     <table class="table table-bordered" class="table-warning">
@@ -73,9 +76,7 @@ $data=mysqli_query($con,"select * from shop_regtb where status='register'");
                           <th>
                         
                           </th>
-                          <th>
-                            
-                          </th>
+                          
                         </tr>
                       </thead>
                       <tbody>
